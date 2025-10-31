@@ -1,0 +1,4 @@
+body {
+    font-family: var(--ff-base);
+    background-color: var(--neutral-red-100);
+}
