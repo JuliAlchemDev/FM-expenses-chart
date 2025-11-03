@@ -1,4 +1,4 @@
-const barChart = document.querySelector('.expenses-chart__spending-chart');
+const barChart = document.querySelector('.expenses-chart__bars');
 
 const getData = async () => {
     const res = await fetch('./data.json');
@@ -27,7 +27,8 @@ const init = async () => {
         bar.style.height = `${amount * 0.17}rem`;
 
         if(amount === maxAmount){
-            bar.style.backgroundColor = 'var(--primary-blue-300)'
+            bar.classList.add('max-amount')
+            // bar.style.backgroundColor = 'var(--primary-blue-300)'
             
         }
 

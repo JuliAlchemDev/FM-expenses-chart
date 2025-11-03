@@ -37,47 +37,35 @@
   <body>
     <main class="expenses-chart">
       <header class="expenses-chart__balance">
-          <section class="balance__text-container">
-            <p class="balance__label">My balance</p>
-            <h2 class="balance__total">$921.48</h2>
-          </section>
-          <picture class="expenses-chart__logo">
-            <img src="./images/logo-mobile.svg" alt="" width="60" height="40" />
-          </picture>
-       
+        <section class="expenses-chart__balance-text">
+          <p class="expenses-chart__balance-label">My balance</p>
+          <h2 class="expenses-chart__balance-total">$921.48</h2>
+        </section>
+        <picture class="expenses-chart__logo">
+          <img src="./images/logo-mobile.svg" alt="" width="60" height="40" />
+        </picture>
       </header>
 
       <section class="expenses-chart__spending">
-       
-        <h2 class="spending__label">Spending - Last 7 days</h2>
+        <h2 class="expenses-chart__spending-label">Spending - Last 7 days</h2>
 
+        <article class="expenses-chart__spending-chart">
+          <ul class="expenses-chart__bars"></ul>
 
-        <article class="spending__bar-chart-container">
-          <ul class="expenses-chart__spending-chart">
+          <footer class="expenses-chart__total">
+            <hr class="expenses-chart__total-separator" />
+            <p>Total this month</p>
+            <section class="expenses-chart__total-info">
+              <h1 class="expenses-chart__total-balance">$478.33</h1>
 
-          </ul>
-
-          <footer class="spending-total">
-              <hr class="spending-total__separator"/>
-                <p>Total this month</p>
-                <section class="spending-total__info">
-                  <h1 class="spending-total__balance">$478.33</h1>
-                  
-                <section class="spending-total__change">
-                    <h3 class="spending-total__percentage">+2.4%</h3>
-                    <p>from last month</p>
-                  </section>
-               
+              <section class="expenses-chart__total-change">
+                <h3 class="expenses-chart__total-comparison">+2.4%</h3>
+                <p>from last month</p>
               </section>
-            </footer>
-
+            </section>
+          </footer>
         </article>
-            
-
-          </section>
-      
-
-      
+      </section>
     </main>
 
     <script src="./script.js"></script>

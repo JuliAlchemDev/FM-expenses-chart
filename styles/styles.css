@@ -25,13 +25,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.balance__label {
+.expenses-chart__balance-label {
   /* preset 5 regular */
   font-size: var(--fs-preset-5);
   font-weight: var(--fw-regular);
   line-height: var(--lh-135-preset-5-6);
 }
-.balance__total {
+.expenses-chart__balance-total {
   /* Text Preset 3  Bold */
   font-size: var(--fs-preset-3);
   font-weight: var(--fw-bold);
@@ -50,27 +50,25 @@ body {
   font-weight: var(--fw-regular);
   line-height: var(--lh-135-preset-5-6);
 }
-.spending__label {
+.expenses-chart__spending-label {
   color: var(--neutral-brown-950);
   /* preset 3 bold */
   font-size: var(--fs-preset-3);
   font-weight: var(--fw-bold);
   line-height: var(--lh-130-preset-1-2-3);
 }
-.expenses-chart__spending-chart {
-  /* border: 1px solid red; */
-  margin-inline: 0.7rem;
-  margin-block-end: 24px;
+
+.expenses-chart__bars {
+  margin-inline: 0.5rem; /*0.2rem*/
+  margin-block-end: var(--spacing-300); 
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   align-items: end;
-  gap: 8px;
+  gap: var(--spacing-100); 
 
   text-align: center;
 }
 .expenses-chart__bar-day {
-  border: 1px solid red;
-
   /* preset 6 regular */
   font-size: var(--fs-preset-6);
   font-weight: var(--fw-regular);
@@ -84,13 +82,14 @@ body {
   background-color: var(--primary-red-500);
   border-radius: var(--border-radius);
 }
+
 .expenses-chart__bar-tooltip {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -120%);
-  padding:  0.5rem 0.3rem;
-  border-radius: 5px;
+  padding: 0.5rem 0.3rem;
+  border-radius: 0.31rem;
 
   display: none;
   /* preset 4 bold */
@@ -105,39 +104,39 @@ body {
   cursor: pointer;
   background-color: var(--neutral-red-300);
 }
-.expenses-chart__bar-day:hover .expenses-chart__bar-tooltip{
+.expenses-chart__bar-day:hover .expenses-chart__bar-tooltip {
   display: block;
 }
+.max-amount {
+  background-color: var(--primary-blue-300);
+}
+.expenses-chart__bar:is(.max-amount):hover {
+  background-color: var(--neutral-blue-200);
+}
 
-
-
-
-
-
-
-
-.spending-total__separator {
+.expenses-chart__total-separator {
   border: 0;
   height: 0.13rem;
   border-radius: 0.06rem;
   background-color: var(--neutral-red-100);
   margin-block-end: var(--spacing-300);
 }
-.spending-total__info {
+.expenses-chart__total-info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.spending-total__change {
+.expenses-chart__total-change {
   text-align: end;
 }
-.spending-total__balance {
+.expenses-chart__total-balance {
   color: var(--neutral-brown-950);
   /* preset 2 bold */
   font-size: var(--fs-preset-2);
   font-weight: var(--fw-bold);
   line-height: var(--lh-130-preset-1-2-3);
 }
-.spending-total__percentage {
+.expenses-chart__total-comparison {
   color: var(--neutral-brown-950);
   /* preset 5 bold */
   font-size: var(--fs-preset-5);
@@ -153,14 +152,14 @@ body {
     padding: var(--spacing-300) var(--spacing-400);
     border-radius: var(--border-radius);
   }
-  .balance__label {
+  .expenses-chart__balance-label {
     /* preset 4 regular */
     font-size: var(--fs-preset-4);
     font-weight: var(--fw-regular);
     line-height: var(--lh-125-preset-4);
   }
-  .balance__total,
-  .spending__label {
+  .expenses-chart__balance-total,
+  .expenses-chart__spending-label {
     /* Text Preset 2  Bold */
     font-size: var(--fs-preset-2);
     font-weight: var(--fw-bold);
@@ -175,6 +174,12 @@ body {
     font-weight: var(--fw-regular);
     line-height: var(--lh-125-preset-4);
   }
+  .expenses-chart__bars {
+    margin-inline: 0.1rem;
+    margin-block-end: var(--spacing-400);
+
+    gap: var(--spacing-200);
+  }
   .expenses-chart__bar {
     --border-radius: 0.31rem;
   }
@@ -182,14 +187,14 @@ body {
     /* preset 5  regular */
     font-size: var(--fs-preset-5);
   }
-  .spending-total__separator {
+  .expenses-chart__total-separator {
     margin-block-end: var(--spacing-400);
   }
-  .spending-total__balance {
+  .expenses-chart__total-balance {
     /* preset 1 bold */
     font-size: var(--fs-preset-1);
   }
-  .spending-total__percentage {
+  .expenses-chart__total-comparison {
     /* preset 4 bold */
     font-size: var(--fs-preset-4);
     line-height: var(--lh-125-preset-4);
