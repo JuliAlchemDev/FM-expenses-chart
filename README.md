@@ -11,7 +11,7 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 ### Links
 
 - Solution URL: [GitHub](https://github.com/JuliAlchemDev/FM-expenses-chart)
-- Live Site URL: [Netlify](https://fm-social-links-profile-julialchem.netlify.app)
+- Live Site URL: [Netlify](https://)
 
 
 ## My process
