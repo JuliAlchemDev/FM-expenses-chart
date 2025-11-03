@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-   <!-- Fonts Preload -->
+    <!-- Fonts Preload -->
     <link
       rel="preload"
       href="./assets/fonts/dm-sans/dm-sans-regular-400.woff2"
@@ -21,38 +21,66 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/_custom.css">
-    <link rel="stylesheet" href="./styles/_reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/_custom.css" />
+    <link rel="stylesheet" href="./styles/_reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="expenses-chart">
+      <header class="expenses-chart__balance">
+          <section class="balance__text-container">
+            <p class="balance__label">My balance</p>
+            <h2 class="balance__total">$921.48</h2>
+          </section>
+          <picture class="expenses-chart__logo">
+            <img src="./images/logo-mobile.svg" alt="" width="60" height="40" />
+          </picture>
+       
+      </header>
+
+      <section class="expenses-chart__spending">
+       
+        <h2>Spending - Last 7 days</h2>
 
 
+        <article class="bar-chart__container">
+          <ul class="bar-chart">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+          </ul>
+          <footer class="bar-chart__total-section">
+              <hr />
+              <section class="total-container">
+                <p>Total this month</p>
+                <section class="total-container__info">
+                  <h1 class="total-container__info-balance">$478.33</h1>
+                <section class="total-container__precentage-change">
+                    <h3 class="total-container__info-precentage">+2.4%</h3>
+                    <p>from last month</p>
+                  </section>
+                </section>
+              </section>
+            </footer>
+        </article>
+            
 
-</head>
-<body>
+          </section>
+      
 
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-
-</body>
+      
+    </main>
+    <!-- 
+    
+    mon tue wed thu fri sat sun 
+        -->
+    <script src="./script.js"></script>
+  </body>
 </html>
