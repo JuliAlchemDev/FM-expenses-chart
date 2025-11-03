@@ -1,4 +1,4 @@
-const barChart = document.querySelector('.bar-chart');
+const barChart = document.querySelector('.expenses-chart__spending-chart');
 
 const getData = async () => {
     const res = await fetch('./data.json');
@@ -15,18 +15,16 @@ const init = async () => {
     spendingInfo.forEach(({day, amount}) => {
         
         const li = document.createElement('li');
-        li.classList.add('bar-chart__day');
+        li.classList.add('expenses-chart__bar-day');
 
         const tooltip = document.createElement('span')
-        tooltip.classList.add('tooltip-details');
+        tooltip.classList.add('expenses-chart__bar-tooltip');
         tooltip.textContent = `$${amount}`
        
 
         const bar = document.createElement('span');
-        bar.classList.add('bar-chart__bar');
-        bar.style.height = `${amount * 0.15}rem`;
-
-       
+        bar.classList.add('expenses-chart__bar');
+        bar.style.height = `${amount * 0.17}rem`;
 
         if(amount === maxAmount){
             bar.style.backgroundColor = 'var(--primary-blue-300)'

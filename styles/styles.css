@@ -6,6 +6,7 @@ body {
 }
 .expenses-chart {
   --border-radius: 0.63rem;
+
   min-width: 21.44rem;
   max-width: 33.75rem;
   display: grid;
@@ -56,6 +57,64 @@ body {
   font-weight: var(--fw-bold);
   line-height: var(--lh-130-preset-1-2-3);
 }
+.expenses-chart__spending-chart {
+  /* border: 1px solid red; */
+  margin-inline: 0.7rem;
+  margin-block-end: 24px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: end;
+  gap: 8px;
+
+  text-align: center;
+}
+.expenses-chart__bar-day {
+  border: 1px solid red;
+
+  /* preset 6 regular */
+  font-size: var(--fs-preset-6);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-135-preset-5-6);
+  position: relative;
+}
+.expenses-chart__bar {
+  --border-radius: 0.19rem;
+  display: block;
+  width: 100%;
+  background-color: var(--primary-red-500);
+  border-radius: var(--border-radius);
+}
+.expenses-chart__bar-tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  padding:  0.5rem 0.3rem;
+  border-radius: 5px;
+
+  display: none;
+  /* preset 4 bold */
+  font-size: var(--fs-preset-4);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-125-preset-4);
+  color: var(--basic-white);
+
+  background-color: var(--neutral-brown-950);
+}
+.expenses-chart__bar-day:hover .expenses-chart__bar {
+  cursor: pointer;
+  background-color: var(--neutral-red-300);
+}
+.expenses-chart__bar-day:hover .expenses-chart__bar-tooltip{
+  display: block;
+}
+
+
+
+
+
+
+
 
 .spending-total__separator {
   border: 0;
@@ -115,6 +174,13 @@ body {
     font-size: var(--fs-preset-4);
     font-weight: var(--fw-regular);
     line-height: var(--lh-125-preset-4);
+  }
+  .expenses-chart__bar {
+    --border-radius: 0.31rem;
+  }
+  .expenses-chart__bar-day {
+    /* preset 5  regular */
+    font-size: var(--fs-preset-5);
   }
   .spending-total__separator {
     margin-block-end: var(--spacing-400);
