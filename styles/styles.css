@@ -7,8 +7,8 @@ body {
 .expenses-chart {
   --border-radius: 0.63rem;
 
-  min-width: 21.44rem;
-  max-width: 33.75rem;
+  /* min-width: 21.44rem;
+  max-width: 33.75rem; */
   display: grid;
   gap: var(--spacing-200);
 
